@@ -17,4 +17,4 @@ jobs:
     steps:
       - name: "adding two numbers"
         id: sum
-        run: echo "the sum of ${{input.number1}} and ${{input.number2}} is ${{${{input.number1}} + ${{input.number2}} }}"
+        run: echo "the sum of ${{inputs.number1}} and ${{inputs.number2}} is ${{${{inputs.number1}} + ${{inputs.number2}} }}"
