@@ -1,0 +1,20 @@
+name: User Input
+on:
+  workflow_dispatch:
+    inputs:
+      number1:
+        description: "first number"
+        default: "0"
+        required: true
+      number2:
+        description: "second number"
+        default: "0"
+        required: true
+jobs:
+  add_number:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "adding two numbers"
+        id: sum
+        run: echo "the sum of ${{input.number1}} and ${{input.number2}} is ${{${{input.number1}} + ${{input.number2}} }}"
